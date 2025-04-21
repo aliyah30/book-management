@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('/app/images/library.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(44, 28, 24, 0.8); /* Brown with opacity */
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7); /* Black with opacity */
+  padding: 15px;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  color: #d4a373; /* Light brown */
+}
+
+.search-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  width: 60%;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #2C1C18;
+  background-color: white;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #2C1C18; /* Dark brown */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e2723; /* Lighter brown */
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.book-item {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  width: 250px;
+  margin: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: black;
+}
+
+.book-item img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.book-item h3 {
+  color: #2C1C18;
+}
+
+.book-item p {
+  color: #000000;
+  margin: 5px 0;
+}
+  

@@ -1,0 +1,14 @@
+<div class="container" *ngIf="book">
+  <div class="book-detail">
+    <img [src]="book.cover" [alt]="book.title + ' cover'" class="book-cover">
+    <div class="book-info">
+      <h2>{{book.title}}</h2>
+      <p class="author">By {{book.author}}</p>
+      <p class="genre">Genre: {{book.genre}}</p>
+      <p class="availability">Available Copies: {{book.availability}}</p>
+      <p class="description">{{book.description}}</p>
+      <button class="back-button" routerLink="/">Back to List</button>
+    </div>
+  </div>
+</div>
+  

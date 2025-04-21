@@ -1,0 +1,23 @@
+<div class="profile-container">
+    <h2>{{ user.name }}'s Profile</h2>
+    
+    <div class="user-details">
+      <p><strong>Username:</strong> {{ user.username }}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+    </div>
+  
+    <div class="borrowing-history">
+      <h3>Borrowing History</h3>
+      <ul>
+        <li *ngFor="let book of borrowingHistory">
+          <strong>{{ book.title }}</strong> - {{ book.author }}
+          <span>Returned on: {{ book.publicationDate }}</span>
+        </li>
+      </ul>
+    </div>
+  
+    <div class="logout-button">
+      <button (click)="onLogout()">Logout</button>
+    </div>
+  </div>
+  

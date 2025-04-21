@@ -1,0 +1,25 @@
+<div class="container">
+  <header>
+    <h1>Welcome to the Book Library</h1>
+    <nav>
+      <a routerLink="/login">Login</a>
+      <a routerLink="/profile">My Profile</a>
+    </nav>
+  </header>
+
+  <div class="search-container">
+    <input type="text" [(ngModel)]="searchQuery" placeholder="Search for books...">
+    <button (click)="searchBooks()">Search</button>
+  </div>
+
+  <div class="book-list" *ngIf="books.length">
+    <div *ngFor="let book of books" class="book-item">
+      <img [src]="book.cover" [alt]="book.title + ' cover'">
+      <h3>{{book.title}}</h3>
+      <p>Author: {{book.author}}</p>
+      <p>Genre: {{book.genre}}</p>
+      <p>Available Copies: {{book.availability}}</p>
+      <button [routerLink]="['/book', book.id]">View Details</button>
+    </div>
+  </div>
+</div>
