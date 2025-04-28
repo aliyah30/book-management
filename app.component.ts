@@ -1,25 +1,17 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../app/auth.service.ts';
-import { Router } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: '../app/login.component.html',
-  styleUrls: ['../app/login.component.css']
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [CommonModule]
 })
-export class LoginComponent {
-  username: string = '';
-  password: string = '';
-
-  constructor(private authservice: AuthService, private router: Router) {}
-
-  onLogin() {
-    this.authservice.login(this.username, this.password).subscribe((success: any) => {
-      if (success) {
-        this.router.navigate(['/profile']);
-      } else {
-        alert('Invalid credentials');
-      }
-    });
-  }
+export class AppComponent {
+onClick() {
+throw new Error('Method not implemented.');
+}
+  title = 'Library Management System';
 }
