@@ -7,7 +7,7 @@ import { Book } from './book.model';
   providedIn: 'root'
 })
 export class BookService {
-  private apiUrl = 'https://www.kaggle.com/datasets/bilalyussef/google-books-dataset';  
+  private apiUrl = 'http://localhost:5000/api/books';  
 
   constructor(private http: HttpClient) {}
 
@@ -17,8 +17,8 @@ export class BookService {
   }
 
   // Fetch a single book by ID
-  getBookDetails(bookId: string): Observable<Book> {
-    return this.http.get<Book>(`${this.apiUrl}/${bookId}`);
+  getBookDetails(book_id: string): Observable<Book> {
+    return this.http.get<Book>(`${this.apiUrl}/${book_id}`);
   }
 
   // Search books based on query

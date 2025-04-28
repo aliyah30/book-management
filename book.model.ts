@@ -1,10 +1,9 @@
-export class Book {
-  id: string | undefined;
-  title: string | undefined;
-  author: string | undefined;
-  genre: string | undefined;
-  publicationDate: string | undefined;
-  availability: number | undefined;
-  cover: string | undefined;
-  description: string | undefined;
+export interface Book {
+  book_id: number;
+  title: string;
+  author: string;
+  isbn: string;
+  publication_date: string;
+  total_copies: number;
+  available_copies: number;
 }
